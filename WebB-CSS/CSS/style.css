@@ -1,0 +1,8 @@
+.hero{
+    background-image: url(./cat.webp);
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

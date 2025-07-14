@@ -1,0 +1,22 @@
+
+7. Create a <p> element and a <pre> element with the same text. Observe the spacing difference.
+
+8. Use semantic tags to create a simple layout(any type of).
+9. Recreate the same layout using <div> instead of semantic tags.
+
+10. Create a complete HTML page with:
+-A header and footer element.
+-A paragraph with text formatting
+-An image and a video
+-A hyperlink to Google
+
+11. Create a page with a green background and white text.
+
+12. Build a personal portfolio page with the following elements:
+-Page title using <h1>
+-Subheading with <h2> (e.g., “About Me”)
+-A paragraph about yourself
+-Your picture using <img>
+-A video or audio about your interests
+-A link to your favorite website
+-Footer with contact info
