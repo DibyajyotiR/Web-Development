@@ -1,8 +1,58 @@
-.hero{
+/* .hero{
     background-image: url(./cat.webp);
     height: 200px;
     width: 200px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+} */
+
+.head{
+    font-size: 40px;
+    color: blue;
+    text-align: center;
+}
+.head:hover{
+    color: red;
+    background-color: burlywood;
+}
+#btn{
+    background-color: darkblue;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 2px;
+}
+#btn:hover{
+    background-color: red;
+    color: black;
+}
+#btn:active{
+    background-color: darkcyan;
+    color: black;
+}
+#input{
+    background-color: d;
+}
+.box{
+    background-color: rgb(117, 152, 216);
+    color: rgb(231, 239, 191);
+    height: 200px;
+    width: 300px;
+    padding: 40px;
+    /* padding:10px 30px 50px 100px;
+    padding: 10px 30px 50px; */
+    /* padding: 10px 30px ; */
+    /* border-width: 10px;
+    border-style: solid; 
+    border-style: double;
+    border-color: bisque; */
+    border: 10px solid rgb(231, 239, 190);
+    /* margin: 30px; */
+    margin: 10px 20px 30px 40px;
+    border-radius: 40px;
+    box-shadow: -10px -10px 10px brown;
+    text-shadow: -2px -2px 5px rgb(15, 6, 24);
+
+
+
 }
