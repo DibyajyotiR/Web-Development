@@ -1,0 +1,33 @@
+#heading{
+    /* display: block; */
+    display: inline;
+    color: red;
+    background-color: yellow;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+#paragraph{
+    display: block;
+    color: red;
+    background-color: rgb(179, 233, 215);
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+#paragraph1{
+    display: inline-block;
+    color: rgb(43, 0, 255);
+    background-color: rgb(127, 219, 255);
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: blanchedalmond;
+    color: black;
+    /* display: none; */
+    text-align: center;
+}
