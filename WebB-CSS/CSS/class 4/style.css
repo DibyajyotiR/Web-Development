@@ -37,13 +37,17 @@
     grid-template-columns: repeat(4,1fr);
     grid-template-columns: 2fr 1fr fr;
 }
+
+/* confused */
+
+
 nav{
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
     height: 80px;
     align-items: center;
-    color: rgb(23, 63, 80)
+    color: rgb(38, 45, 107)
 }
 nav ul{
    display: flex; 

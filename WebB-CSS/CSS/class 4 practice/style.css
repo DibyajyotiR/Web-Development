@@ -1,0 +1,93 @@
+*{
+    background-color: rgb(37, 37, 109);
+    color:aliceblue;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    padding: 0 100px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+nav ul a{
+    text-decoration: none;
+}
+.login{
+    background-color: rgba(228, 201, 80, 0.956);
+    color:rgb(37, 37, 109) ;
+    border-radius: 4px;
+    padding: 8px 13px ;
+}
+.try{
+    background-color:rgb(127, 127, 233);
+    border-radius: 5px;
+    padding: 8px 13px ;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    gap: 20px;
+}
+#hero2 img{
+    height: 500px;
+    width: 800px;
+}
+#main2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 100px;
+    gap: 20px;
+}
+#pro2 img{
+    height: 500px;
+    width: 800px;
+}
+.get{
+    background-color:rgb(127, 127, 233);
+    border-radius: 5px;
+    padding: 8px 13px ;
+}
+#main3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 100px;
+    gap: 20px;
+}
+.box{
+    background-color: aliceblue;
+    height: 500px;
+    width: 800px;
+}
+#main4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 100px;
+    gap: 20px;
+}
+#main5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 100px;
+    gap: 20px;
+}
+#main6{
+    display: inline-block;
+    justify-content: center;
+    align-items: center; 
+}
+#choose{
+    align-items: center;
+    justify-content: center;
+}
