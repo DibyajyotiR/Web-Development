@@ -33,15 +33,26 @@
     background-color: rgb(135, 244, 226);
     height: 100vh;
     display: grid;
+    color: aliceblue;
     /* grid-template-columns:200px 150px 200px 300px ; */
-    grid-template-columns: repeat(4,1fr);
-    grid-template-columns: 2fr 1fr fr;
+    grid-template-columns: repeat(4,1fr); 
+    /* grid-template-columns: 2fr 1fr 2fr; */
+    /* grid-template-rows: 100px 200px 300px; */
+    grid-template-rows: repeat(3,1fr);
+    /* grid-gap: 10px; */
+}
+.first{
+    grid-row: span 3;
+
+}
+#second{
+    grid-column: span 2;
 }
 
 /* confused */
 
 
-nav{
+/* nav{
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
@@ -57,4 +68,4 @@ nav ul{
 nav ul a{
     text-decoration: none;
     color: black;
-}
+} */

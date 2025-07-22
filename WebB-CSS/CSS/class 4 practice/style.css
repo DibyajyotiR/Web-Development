@@ -70,6 +70,7 @@ nav ul a{
 }
 #main4{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding:40px 100px;
@@ -83,11 +84,13 @@ nav ul a{
     gap: 20px;
 }
 #main6{
-    display: inline-block;
+    
     justify-content: center;
     align-items: center; 
+    text-align: center;
 }
 #choose{
     align-items: center;
     justify-content: center;
+   
 }

@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px 15px 75px;
+}
+#nav ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    text-decoration: none;
+}
+#nav ul a{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    background: linear-gradient(to right ,orangered,rgb(250, 122, 75));
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    background: linear-gradient(to left ,orangered,rgb(250, 122, 75));
+}
+#web{
+    background: linear-gradient(to right ,orangered,rgb(250, 122, 75));
+    color: white;
+}
+#web h3{
+    padding: 5px 0px;
+    text-align: center;
+}
+/* #leftsection{
+    width: 50%;
+}
+#rightsection{
+    width: 50%;
+} */
+#hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 70px 30px 70px;
+    gap: 90px;
+    background: linear-gradient(to top ,rgb(238, 176, 154),white);
+    height: 70%;
+}
+.service{
+    color: orangered;
+    font-size: 18px;
+}
+#heading{
+    font-size: 45px;
+    width: 50%;
+    margin: 20px 0;
+    line-height: 45px;
+}
+#heading span{
+    color: orangered;
+}
+.description{
+    color: gray;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+#rightsection img{
+    height: 400px;
+    width: 650px;
+}
+#contact{
+    display: flex;
+    gap: 20px;
+}
+#contact a{
+    text-decoration: none;
+    color: black;
+    font:bold;
+}
+#why{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    line-height: 40px;
+}
+.why{
+    color: orangered ;
+    font-size : 18px;
+}
+#para{
+    padding: 0px 310px;
+    text-align: center;
+}
+#customise{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 50px 70px 30px 70px;
+    gap: 10px;
+
+}
+#customise-box{
+    width: 400px;
+    height: 250px;
+    border: 0.2px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    padding: 20px 80px;
+}
+#customise-box:hover{
+   background-color:orangered ;
+   color: white;
+}
+#Features{
+    font-size: large;
+    font: bolder;
+}

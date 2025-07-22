@@ -1,0 +1,91 @@
+.box{
+    /* height: 400px;
+    width: 400px; */
+    background-color: rgb(112, 102, 102);
+    color: white;
+    /* height: 40vh; */
+    /* width: 40wh; */
+    /* width: 40%;
+    font-size: 40%; */
+    height: 40vmax;
+    width: 40vmax;
+}
+.container{
+    font-size: 30px;
+    background-color: chocolate;
+}
+.content{
+    font-size: 1rem;
+    /* font-size: 1em; */
+    background-color: darkcyan;
+}
+.rotate{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(100, 100, 222);
+    color: white;
+    /* transform: rotateX(80deg); */
+    /* transform: rotateY(40deg); */
+    /* transform: rotateZ(40deg);  */
+     transform: rotate(60deg);
+
+
+}
+.scale{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(90, 102, 104);
+    color: white;
+    /* transform: scaleX(2);  */
+    /* transform: scaleY(2); */
+    /* transform: scale(2); */
+    transform: scale(2,1.5);
+}
+.translate{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(38, 102, 104);
+    color: white;
+    /* transform: translateX(-100px); */
+    /* transform: translateY(100px); */
+    transform: translate(100px, 100px);
+}
+.skew{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(111, 220, 120);
+    color: white;
+    /* transform: skewX(30deg); */
+    /* transform: skewY(-30deg); */
+    transform: skew(30deg, 30deg);
+}   
+#btn{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition-property: transform;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+} 
+#btn:hover{
+    background-color:  rgb(48, 203, 9);
+}
+#btn:active{
+    transform: scale(0.7);
+}
+#hero{
+    background-color: aquamarine;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    transition-property: transform;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+}
+#hero:hover{
+    transform: scale(3);
+}
