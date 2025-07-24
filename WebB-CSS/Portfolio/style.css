@@ -69,7 +69,8 @@ nav ul a{
     width: 450px;
     background-color: white; 
     gap: 10px;
-    padding: 50px;  
+    padding: 50px; 
+    border-radius: 5px; 
 }
 .design2{
     font-size: 20px;
@@ -82,7 +83,38 @@ nav ul a{
 }
 #illustration{
     display: flex;
+    gap: 20px;
 }
-@media{
+.d2020 img{
+    height:250px;
+    border-radius: 5px;
+}
+.dash{
+    display: flex;
+    gap: 20px;
+}
+.dash button{
+    background-color: rgb(5, 5, 53);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+}
+.bdash{
+    font-weight: bold;
+    font-size: 35px;
+}
+#icon{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 2rem;
     
+}
+#all{
+    justify-content: center;
+    padding-bottom: 30px;
+    text-align: center;
 }
