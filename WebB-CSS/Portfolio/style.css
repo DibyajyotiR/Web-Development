@@ -110,8 +110,7 @@ nav ul a{
     gap: 10px;
     padding-top: 30px;
     padding-bottom: 10px;
-    font-size: 2rem;
-    
+    font-size: 2rem; 
 }
 #all{
     justify-content: center;
