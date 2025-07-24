@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    
+}
+ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 30px 70px;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+#portfolio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 170px;
+}
+#pic img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.hi{
+    font-size: 50px;
+    font-weight: bold;
+}
+.amet{
+    font-size: 20px;
+}
+#john button{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 6px 8px;
+    font-weight: bold;
+}
+#portfolio2{
+    background-color: rgb(216, 240, 250);
+}
+#recent{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 20px 170px;
+}
+#recent a{
+    text-decoration: none;
+}
+#bold{
+    font-size: 26px;
+    font-weight: bold;
+}
+#design{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center; 
+    padding: 0px 170px 25px 170px;
+}
+.design2{
+    height: 200px;
+    width: 450px;
+    background-color: white; 
+    gap: 10px;
+    padding: 50px;  
+}
+.design2{
+    font-size: 20px;
+}
+#featured{
+    padding: 20px 170px;
+}
+#featured #feature{
+    color: rgb(26, 26, 26);
+}
+#illustration{
+    display: flex;
+}
+@media{
+    
+}
