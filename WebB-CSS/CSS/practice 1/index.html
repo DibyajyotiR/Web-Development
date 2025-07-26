@@ -21,7 +21,61 @@
             color: red;
             line-height: 1.5;
             
+            
         }
+        .highlight p span{
+            background-color: yellow;
+            padding: 10px;
+            border: 2px dashed blue;
+        }
+        #main-box{
+            height: 200px;
+            width: 300px;
+            background-color: lightgreen;
+            border: 1px solid blue;
+        }
+        #box{
+            
+        }
+        #box p{
+           height: 100px;
+            width: 100px;
+            background-color: lightgray;
+            border: 5px solid black;
+            padding: 20px;
+            margin: 30px;
+        }
+        #block p{
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: blanchedalmond;
+        }
+        #inline p{
+            display: inline;
+            width: 150px;
+            height: 150px;
+            background-color: blanchedalmond;
+        }
+        #inline-block p{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: blanchedalmond;
+        }
+        #container{
+            display: flex;
+            width: 220px;
+            height: 300px;
+            justify-content: space-around;
+            align-items: center;
+            background-color: cornflowerblue;
+        }
+        .box2{
+            width: 40px;
+            height: 40px;
+            background-color: azure;  
+        }   
     </style>
 </head>
 <body>
@@ -29,6 +83,30 @@
      <h6 style="color: white;">practice inline css</h6>
      <h1>Font-family to Arial</h1>
      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aut id consequuntur explicabo. Doloremque dolor recusandae impedit explicabo tenetur maxime quas quo, accusantium excepturi cumque non, ducimus facilis hic! Ratione?</p>
-    
+    <div class="highlight">
+        <p><span>its highlighting</span></p>
+    </div>
+    <div id="main-box">
+    </div>
+<div id="box">
+    <p>I am a Box</p>
+</div>
+<div id="block">
+    <p>block display</p>
+    <p>block display</p>
+</div>
+<div id="inline">
+    <p>inline display</p>
+    <p>inline display</p>
+</div>
+<div id="inline-block">
+    <p>inline-block display</p>
+    <p>inline-block display</p>
+</div>
+<div id="container">
+    <div class="box2">b1</div>
+    <div class="box2">b2</div>
+    <div class="box2">3</div>
+</div>
 </body>
 </html>

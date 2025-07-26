@@ -1,0 +1,15 @@
+#grid{
+    
+}
+#grid .box1{
+    display: flex;
+    background-color: cadetblue;
+    height: 100px;
+    width: 100px;
+}
+#grid .box2{
+    display: flex;
+    background-color: rgb(74, 132, 115);
+    height: 100px;
+    width: 100px;
+}

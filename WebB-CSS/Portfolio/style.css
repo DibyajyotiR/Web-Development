@@ -44,6 +44,7 @@ nav ul a{
 }
 #portfolio2{
     background-color: rgb(216, 240, 250);
+    
 }
 #recent{
     display: flex;
@@ -71,8 +72,6 @@ nav ul a{
     gap: 10px;
     padding: 50px; 
     border-radius: 5px; 
-}
-.design2{
     font-size: 20px;
 }
 #featured{
@@ -80,6 +79,9 @@ nav ul a{
 }
 #featured #feature{
     color: rgb(26, 26, 26);
+}
+#feature{
+    font-weight: bold;
 }
 #illustration{
     display: flex;
@@ -111,9 +113,45 @@ nav ul a{
     padding-top: 30px;
     padding-bottom: 10px;
     font-size: 2rem; 
+    position: sticky;
 }
 #all{
     justify-content: center;
     padding-bottom: 30px;
     text-align: center;
+}
+
+@media screen and (max-width: 450px){
+    #portfolio{
+    flex-direction: column;
+    padding: 20px;
+}
+    #recent{
+    padding: 20px;
+    justify-content: space-between;
+}
+#design{
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.design2{
+    height: auto;
+    width: 90%;
+    background-color: white; 
+    padding: 15px; 
+}
+#featured{
+    padding: 20px;
+}
+#illustration{
+    flex-direction: column;
+    gap: 20px;
+}
+.d2020 img{
+    height:200px;
+}
+#icon{
+    font-size: 1rem;
+}
 }
