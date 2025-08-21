@@ -1,0 +1,145 @@
+
+if we try to navigate from one page to another page everytime it  is going to refresh and each time dom tree will be recreated .
+multipage application are slower as compare to single page application.
+we  can create multipage application by using only html css javascript
+what is single page application ?
+ -it is an application where it will be having singl epage or single html file
+ -it will try to navigate from one page to anotherpage ,it will not gonna refresh beacuse we will be staying in the same html file but we are moving from one component to another component,so it makes applicationfaster
+ -To create a single page application we need some advanced concept like jquery,angular,react etc
+react jS-
+it is javascript library(predefind collection of method and property) which is used to built UI (user interface)
+Feature of React
+1-single page application
+   ex-wp,facebook
+2- virtual dom 
+   It is a blue print of real dom
+   Whenever we run react applicationfor the 1st time DOM structure is going to created parallaly a copy of real DOM also going to get generated,this is calledvirtual DOM
+3-Component base architecture (CBA)
+   react follow CBA beacuse we can reuse the Component,better code maintain ability   
+   webpage will be devied into small part that small part is called component
+   Rules to create acomponent
+         THERE ARE TWO TYPE OF COMPONENT 1.FUNCTION BASED COMPONENT  2.CLASS BASED COMPONENT
+        1st letter should be in capital
+        componentname should be written in pascalCase
+        component extension should be .js or .jsx
+        ex- Component.jsx
+What is Jsx (extensiblemarkup language)
+    it is a combination of javascript and xml
+difference between  
+HTML 
+ - In html in attribute we use class.
+ - all the event in html we use onclick,onmouseover
+ - in html we can write two or more defferent sibling tag or element.
+               <h1>hello</h1>
+               <h1>hello</h1>
+               <h1>hello</h1>          
+
+xml          
+- In html in attribute we use className.  
+ - all the event in xml we use  onClick,onMouseover
+ - in xml we have ro wrap all the elements into a parent container
+                 <div>
+                   <h1>hello</h1>
+                   <h1>hello</h1>
+                   <h1>hello</h1>
+                  </div> 
+
+
+we dont need to change anything in this folder
+public-
+  this folder contains the main sturcture of the webpage.
+  the only important file we have to maintain is index.html
+SRC-
+it is a source folder where we are going to write our code   
+the two important files we have to maintain is index.js or main.jsx   and app.js or app.jsx
+
+index.jsx-
+  it is cpnsidered as root file of reactjs which is used to create a coonection between app.jsx and html document
+app.jsx-
+  it is considerd as parent component of reactjsx  
+package.json and packagelock.json -
+   these are the two files where it is considerd as directory of the react folder
+   it will give all the imformation about libraries present in the project   
+react project setup-
+   1.using create react app
+   2.npx create-react-app <project-name>   
+   3.cd <project-name>
+   4.npm start(or)npm run start
+
+   1.using create vite app
+   2.npm create vite@latest <project-name>   
+   3.cd <project-name>
+   4.npm start(or)npm run start
+  
+after installation of react project we will be getting some default folders and file
+now we have to maintain two  important files in src folder index.js or main.jsx   and app.js or app.jsx
+
+main.jsx   //files
+
+import{createRoot}from "react-dom/client";
+import App from "./App";
+
+const path =document.getElementById("root");
+createRoot(path).render(<App/>)
+
+App.jsx //files
+
+import React from  "react";
+import Navbar from "./Components/Navbar"
+import Content from "./Components/Content"
+import Footer from "./Components/Footer"
+const App=()=>{
+  return(
+    
+    <div>
+      <Navbar></Navbar>
+      <Content></Content>
+      <h1>Hello</h1>
+      <p>world</p>
+      <Footer></Footer>
+    </div>
+  )
+}
+export default App;
+
+// main.jsx root component
+After  installation setup we have to create a new folder named Components inside src folder
+after creating Components folder we will all our project inside component folder
+app component is called as parent component and all the component which present inside components folder are called as child component
+For Example :  Content.jsx , Footer.jsx ,Navbar.jsx
+
+import React from "react";
+
+const Navbar=()=>{
+    return(
+        <div>
+            <h1>Navbar</h1>
+        </div>
+    )
+}
+export default Navbar;
+
+
+
+import React from "react";
+
+const Content=()=>{
+    return(
+        <div>
+            <h1>Content</h1>
+        </div>
+    )
+}
+export default Content;
+
+
+import React from "react";
+
+const Footer=()=>{
+    return(
+        <div>
+            <h1>Footer</h1>
+        </div>
+    )
+}
+export default Footer;
