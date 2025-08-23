@@ -2,14 +2,125 @@
     
 }
 #grid .box1{
-    display: flex;
+    /* display: flex; */
     background-color: cadetblue;
     height: 100px;
     width: 100px;
+    
 }
 #grid .box2{
-    display: flex;
+    /* display: flex; */
     background-color: rgb(74, 132, 115);
     height: 100px;
     width: 100px;
 }
+#grid .box3{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+}
+#grid .box4{
+    background-color: rgb(77, 65, 183);
+    height: 100px;
+    width: 100px;
+}
+#grid .box5{
+    background-color: rgb(218, 112, 222);
+    height: 100px;
+    width: 100px;
+}
+#grid .box6{
+    background-color: rgb(255, 127, 176);
+    height: 100px;
+    width: 100px;
+}
+#grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid02{
+    background-color: rgb(233, 196, 147);
+    width: 100px;
+    height: 100px;
+    color: black;
+}
+#grid2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+#grid2 .image{
+    width: 100px;
+    height: 100px;
+}
+#position{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    position: absolute;
+}
+#shadow{
+    padding: 20px 20px;
+    
+}
+#shadow1{
+    padding: 50px;
+}
+#shadow2{
+    padding: 50px;
+}
+#shadow3{
+    padding: 50px;
+}
+.shadow01{
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+    box-shadow: -10px -10px 0px brown;
+}
+.shadow02{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(20, 231, 255);
+    box-shadow: 10px 10px 10px rgb(41, 158, 191);
+}
+.shadow03{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(174, 1, 1);
+    box-shadow: -10px -10px 10px rgb(135, 12, 12);
+}
+#boxx1{
+    padding: 80px;
+}
+.boxx1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(145, 106, 180);
+    border-radius: 2px;
+     box-shadow: 0px 0px 6px 2px  rgb(47, 40, 52);
+    transition: box-shadow 0.3 ease;
+}
+.boxx1:hover{
+    box-shadow: 0px 0px 10px 8px rgb(46,40,57);
+}
+h1{
+    color: rgb(202, 172, 5);
+    text-shadow: 1px 1px 3px gold;
+}
+h1:hover{
+    text-shadow: 1px -1px 3px rgb(255, 119, 0);
+}
+button{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 11px 18px;
+}
+button:hover{
+    background-color: rgb(56, 41, 23);
+    color: white;
+    font-size: 14px;
+}
+

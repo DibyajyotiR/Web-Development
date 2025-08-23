@@ -1,3 +1,4 @@
+
 # JavaScript:-
 -JavaScript is a scripting and programming language, introduced to perform live-scripting or dynamic responsive on a web-page.
 -Netscape Communications hired 'Brendan Eich' to develop a scripting language for their browser, Netscape Navigator. Eich created JavaScript in just 10 days.
@@ -86,6 +87,7 @@ function calling ->
 functionName();
 
 # Operators in JS:- Operators are symbols used to perform operations on one or more variable and values.
+
 ## Arithmetic Operator:-
 1. Addition (+): Adds two operands.
 2. Subtraction (-): Subtracts right operand from left operand.
@@ -117,14 +119,6 @@ functionName();
 1. Logical AND (&&): Returns true if both operands are true.
 2. Logical OR (||): Returns true if either of the operands is true.
 3. Logical NOT (!): Returns the opposite of the operand's boolean value.
-
-## Unary Operators:- Unary operators operate on a single operand.
-1. Inrement (++): Increases the value of the operand by 1.
-a). Pre-increment (++x): Increments before use.
-b). Post-increment (x++): Increments after use.
-2. Decrement (--): Decreases the value of the operand by 1.
-a). Pre-decrement (--x): Decrements before use.
-b). Post-decrement (x--): Decrements after use.
 
 # Conditional Statement :-
 -To implement some condition in the code.
@@ -352,3 +346,21 @@ Syntax:- array.forEach((iterator)=>{
     //instruction
 })
 -It takes a Callback function as an argument in which the user will pass the iterator(accumulator) that iterates through every element of the array.
+
+# Array methods:-
+10. map():- It is used to traverse(visit) every element in the array.
+-It uses a callback function as an argument. 
+-Callback function uses accumulator as an argument, where each item will store once at a time starting from zero index.
+Syntax:- array.map((item)=>{
+    //instruction
+})
+
+11. filter():- It is used to traverse every element in the array and it will return a sub-array based on some condition.
+-If the condition is true then it will return the value else it will skip.
+Syntax:- array.filter((item)=>{
+    return condition;
+})
+
+12. reduce():- It is used to reduce multiple elements of an array into a single value.
+-It accepts a callback function that has two arguments; initial value and accumulator.
+Syntax:- array.reduce((initialValue, accumulator)=> initialValue += accumulator, 0)
