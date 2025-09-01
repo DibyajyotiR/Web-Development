@@ -7,6 +7,8 @@ import GlobalCSS from './Components/GlobalCSS'
 import Contents from './Components/Contents'
 import Product from './Components/Product'
 import "./style.css";
+import ListData from './Components/ListData'
+import ListEffect from './Components/ListEffect'
 
 const App=()=> {
 
@@ -14,9 +16,10 @@ const App=()=> {
     <div>
       {/* <InlineCss/>
       <StyleObject/>  
-      <GlobalCSS/>   */}
+      <GlobalCSS/>   
       <Product/>
-      {/* <Contents /> */}
+      <Contents />  */}
+      <ListEffect/>
     </div>
   )
 }
