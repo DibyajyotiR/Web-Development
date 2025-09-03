@@ -617,6 +617,8 @@ A router in React JS is a library that allows us to navigate between different p
 ## Why do we need Router in React JS
 - A router is needed in React JS to provide a seamless user experience when navigating through different parts of a SPA. Without a router, you would have to manually manage the state of the application and manually render different components based on the current URL.
 
+npm i react-router-dom
+
 ## How to use Router in React JS
 - To use a router in React JS, you need to first install a router library such as "react-router-dom" using a package manager like npm. Once installed, you can import the necessary components from the library, such as "BrowserRouter", "Routes", "Route", and "Link", and use them in your React components to define the routes and navigation behaviour of your application.
 - "BrowserRouter" is a component that should wrap your entire application and provides the history and location objects to your components. The history object keeps track of the browser's history, and the location object contains information about the current URL.
