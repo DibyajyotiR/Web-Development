@@ -14,8 +14,8 @@ const path = require('path')  //inbuit module of nodejs
 // console.log(path.resolve("app.js"));
 
 //!Getting special path property
-// console.log(__dirname);
-// console.log(__filename);
+console.log(__dirname);
+console.log(__filename);
 console.log(path.isAbsolute("/Path Module/app.js"));
 console.log(path.isAbsolute('app.js'));
 

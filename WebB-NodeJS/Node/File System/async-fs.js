@@ -18,7 +18,7 @@ async function createFolder(){
         console.log("Folder got Created"); 
     }
 }
-createFolder()
+//createFolder()
 
 //* Step-2: Create and write to a file
 async function  writeFile() {

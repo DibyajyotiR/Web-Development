@@ -11,5 +11,19 @@ export function addition(a,b){
 export function substraction(a,b){
     console.log(a-b);
 }
-export const value=1234
-export const name="Math Module"
+export default{
+    addition,
+    substraction,
+    name:"Math Module",
+    value:2344
+}
+
+
+// export function addition(a,b){
+//     console.log(a+b);
+// }
+// export function substraction(a,b){
+//     console.log(a-b);
+// }
+// export const value=1234
+// export const name="Math Module"

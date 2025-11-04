@@ -1,0 +1,217 @@
+What is Backend Development ?
+-Backend Development is the part of web development that focuses on creating and managing the server side, database APIs of an application.
+-It is the backbone that support frontend handling, processing,storing ,and securing data that get displayed to the users.
+-Backend focuses on the server side of a website or application handling the data logic and integration required to ensure smooth functionality
+
+Role of a backend developer
+Build APIs --> Manage DB --> Handle Server Side Logic
+
+Key Components of Backend Development : 
+ 1)Database : USE for storing and retrieving data
+ 2)server : where code runs and request are processed
+ 3)API : it allows communication between frontend and backend
+ 4)Programming Languages : used to build the backend 
+ 5)Authentication : 
+
+What are Shell Commands?
+--Shell Commands are the instructions or inputs given to command line interpreter known as a shell to perform some specific task on a computer.
+--It is use to direct interact with the operating system through the terminal .
+--By using shell commands we can create folder, files, delete folder and files also we can copy files from one folder to another without using a mouse.
+
+Types of shell
+--There are 4 types of Shell
+1)BASH - Bone Again Shell 
+2)ZSH - Z Shell
+3)Power Shell
+4)FISH - Friendly Interactive Shell
+
+Node JS :
+--Its a JavaScript runtime environment that allows us to run JavaScript code  outside of a web browser,
+--It is an open source cross platform JavaScript runtime environment that runs on chromes V8 Engine
+--Node JS is known for its non-blocking I/O ,Event driven architecture making it great for building sckelble high performance
+
+Node JS Architecture :
+1-Event Driven
+2-Single Threaded /non-blocking I/O
+--It handle multiple connections using a single thread via the event loop and callback.
+--Operations like reading files ,databases or network calls do not block execution. 
+--Instead callback, promise, async await and else completion.
+
+Node REPL(Read-Evaluate-Print-Loop)
+--It is an interactive shell in NodeJS, that allows to execute JavaScript code line by line and see immediate results.
+--It is useful for quick testing, debugging and learning where JavaScript code can be experimented with directly.
+
+How it Works ?
+--Read :It takes the user input
+--Evaluate :It evaluate the code immediately in the same line
+--Print :It Shows the output or result
+--LOOP :It waits for the next input until the user exits
+--To start NodeREPL  open terminal or cmd type (node) and press enter
+--To Exit we can use (.exit)
+--And to clear Environment (.clear)
+
+Module :
+--A module in NodeJS is self contained unit of code placed in a file or folder ,capable of exporting functionality for use elsewhere.
+--Modules prevent global name space pollution help organising code and improve maintainability
+
+There are three types of modules
+1-BuiltIn Modules-Included with JS
+2-Local Modules -User defined or created by developers as a part of project
+3-External Modules - Installed via npm and stored in'node_modules'folder
+
+
+Modules in NodeJS
+--Node uses a powerful module system to help organise code ,promote reuse and mcapsulate functionality of node js application structure.
+--There are two primary systems in nodejs
+ 1.CommonJs Modules and
+ 2.ES6/ECMA Script Modules
+
+CommonJs Module System :
+--It is a traditional module system in node js.It uses require()method  to import module and "module.export" or export functionality. 
+--Each module or file wrap in a function exposing module ,exports ,require.
+-- __filename and __dirname   for local scope ensuring variable donot link into global scope.
+
+ES6/ECMA Script Modules :
+--ES6 is the modern standardise utilising import and export. 
+--modules are loaded asynchronously for better performance.
+--we have to use type module in package.js
+
+on to enable ES6.
+
+Node Js path module :
+--The node js path module is a built in module used to work with files and directory across different operating system ,allowing seamless cross platform development and file manipulation task.
+--path module helps handle differences in path format between operating system
+--it is used for manipulating ,joining,resolving,and normalising path  in model  application
+
+Path Module : (method)
+-> path.resolve()  :- Resolves and absolute path from relative segments.
+-> path.basename() :- Gets the last part of a path.
+-> path.dirname()  :- It return the directory name of a path.
+-> path.extname()  :- It returns the file extension.
+-> path.isAbsolute() :- It checks path is absolute or not.
+
+--To use path module in NodeJS, we have to import it 
+
+NodeJS FileSystem(fs) :
+--NodeJS filesystem(fs)module enables file and directory I/O operations offering both sysnchronous and asynchronous methods to handle files efficiently in different scenario.
+
+Use of fs module :
+--The NodeJs fs module is a core part of NodeJS,that allows programm to interact with the computer's filesystem.
+--Its primary use is to perform essential file and diectory Operations such as reading writting creating deleting and monitoring files. 
+
+Synchronous Method :
+--Sysnchronous method block execution until the operation completes,making other process wait,which can be inefficient for I/O bound task.
+--Some common sysnchronous method :-
+     ---fs.readFile()
+     ---fs.appendFileSync()
+     ---fs.mkdirSync()
+     ---fs.existsSync()
+     ---fs.writeFileSync()
+     ---fs.renameSync()
+
+Asynchronous Method :
+--Asynchronous method do not block execution instead they use callbacks ,promises or async-await allowing other Operations to run curently and improving for heavy I/O workload.
+--These are preffered for sckelble eye-performance  application or server
+--Some common sysnchronous method :-
+     ---fs.unlink()
+     ---fs.readFile()
+     ---fs.appendFile()
+     ---fs.exits()
+     ---fs.rename()
+
+CLI(Command Line Interface):
+--CLI means interacting with your programm through the terminal instead of the browser or Gui(graphical user interface).
+--In nodeJS we can create CLI tools that accept commands,arguments ,options like npm or npx.
+
+HTTP Server(Hyper Text Transfer Protocol):
+--An HTTP server is programm taht listens for request from clients and sends back response(like web page or data).
+--In NodeJS we can easily create an HTTP server using the builtin HTTP module. 
+--client and browser sends a request like URL,then server listens on a specific port no and then the server processes the request and sends back a responds like html, text or json
+
+http module ---> http server --->request --->response
+         
+          = request----->http server--->response
+
+Steps to create https server in nodejs :-
+Step 1: we have to import http module  either by using require() or import statement.
+
+const http=require('http')
+--The http module provides methods to create and manage servers.
+
+Step 2: create a server by using creatServer()
+
+const server = http.creatServer((req,res)=>{
+     res.writeHead(200,('Content-Type': 'test/plain'));
+     res.end("message");
+})
+
+req-> Request object which contains data from client side
+res-> Response object which is used to send data to client
+writeHead()->it is a method which is used to define the header or set the status code and content type.
+end()->it is is a method which is used to send data to client side
+
+Step 3: Listen/Start the server by using listen()
+--we need to pass a port  number as an argument to the listen() to run the server on a specific port.
+
+server.listen(3000,()=>{
+     log("Server running at http://localhost:3000")
+})
+
+--Port number can be anything in between 1024 and 6555(e.g: 3000,5000,8000)
+--Now we can open our browser and go to the URL to see the Response
+
+
+Some Important Request Properties
+req.url : the path requested by client side
+e.g : /about , /contact
+
+req.methods : it is the http method used to check request type 
+e.g: GET,POST,PUT
+
+req.headers : it contains all request headers
+e.g : {host : 'localhost.....'} 
+
+Important Response Properties :
+res.writeHead(statusCode,header): It is used to set the HTTP status code and response header.
+
+res.write(data) : It is used to send data in Chunks
+
+res.end([data]) : sends response, and it must be called
+
+
+COMMON HTTP STATUS CODE
+200 -> ok -> Request successful
+201 -> created -> Data created
+400 -> Bad Request -> Invalid Request 
+401 -> Unauthorized -> No Authentication
+403 -> Forbidden -> Access defined
+404 -> Not found -> Page Not found
+500 -> Internal server error -> server crashed
+
+Express :
+Express is a light weight nodejs framework design to make the development of server side applications straight forward by providing inbuilt methods for routing ,handling http request/response and intigrating middle ware easily
+--Express is a minimalist web application framework built on nodejs which is primarily use to simplify the process of creating web servers.
+--Express is flexible and fast which enables developers to built both small and large applications,
+--It is commonly used to create APIs, web application abd handling various http methods.
+
+Use of Express :
+--Built Web App and API using routing and middleware
+--Reduces boilerplate code and coding time compare to  VANILA nodeJS
+--Organises functionality with middleware for tasks like authentication,login,and errorhandling
+--It allows rapid development of sckelble and mentainable web application
+
+Differences between Express and nodejs
+--Routing :(NodeJS) -> In nodejs manual setup mode code require
+           (Express) -> Clean and builtIn routing system
+
+--JSON Parsing :(NodeJS) -> manual or 3rd party
+                 (Express) -> simple by using Express.json()
+
+--Middleware :(NodeJS) -> needs 3rd party library
+            (Express)-> BuiltIn and systematic  middleware support
+
+HOW to create an Express project ?
+--To create an Express project 1stly we need nodejs Installed with npm 
+--And then Install the E2edxpress package using npm
+--After that we have setup our application step by step                              
+                              
