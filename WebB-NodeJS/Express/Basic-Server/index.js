@@ -35,6 +35,9 @@ app.post('/register',(req,res)=>{
 app.get('/register',(req,res)=>{
     res.send("Register route ")
 })
+app.get('/contact',(req,res)=>{
+    res.send("Contact route ")
+})
 app.listen(5000,()=>{
     console.log(`Server running on http://localhost:${5000}`);
     
