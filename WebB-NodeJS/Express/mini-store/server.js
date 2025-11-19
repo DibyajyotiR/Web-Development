@@ -21,8 +21,11 @@ app.get('/contact',(req,res)=>{
     res.send("this is contact us page")
 })
 //categories
+///categories?color=red&price=40000
 app.get('/categories',(req,res)=>{
     res.send("this is categories page")
+    console.log(req.query);
+    
 })
 
 //Route parameters
