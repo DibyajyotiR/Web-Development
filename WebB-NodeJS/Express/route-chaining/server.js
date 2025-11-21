@@ -64,7 +64,7 @@ app.route("/users")
 //     })
 
 ////Route chaining parameter another way
-const userId=req.params.id
+
 app.route("/users/:id")
     .get((req,res)=>{
         res.send(`User Details for ID : ${userId}`)
