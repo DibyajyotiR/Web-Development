@@ -45,40 +45,38 @@ app.route("/users")
 // })
 
 //Route chaining parameter
-// app.route("/users/:id")
-//     .get((req,res)=>{
-//         const userId=req.params.id
-//         res.send(`User Details for ID : ${userId}`)
-//     })
-//     .post((req,res)=>{
-//         const userId=req.params.id
-//         res.send(`User Details for ID : ${userId} Created`)
-//     })
-//     .put((req,res)=>{
-//         const userId=req.params.id
-//         res.send(`User Details for ID : ${userId} Updated`)
-//     })
-//     .delete((req,res)=>{
-//         const userId=req.params.id
-//         res.send(`User Details for ID : ${userId}`)
-//     })
-
-////Route chaining parameter another way
-
 app.route("/users/:id")
     .get((req,res)=>{
+        const userId=req.params.id
         res.send(`User Details for ID : ${userId}`)
     })
     .post((req,res)=>{
+        const userId=req.params.id
         res.send(`User Details for ID : ${userId} Created`)
     })
     .put((req,res)=>{
+        const userId=req.params.id
         res.send(`User Details for ID : ${userId} Updated`)
     })
     .delete((req,res)=>{
-        res.send(`User Details for ID : ${userId} Deleted`)
+        const userId=req.params.id
+        res.send(`User Details for ID : ${userId}`)
     })
 
+////Route chaining parameter another way
+// app.route("/users/:id")
+//     .get((req,res)=>{
+//         res.send(`User Details for ID : ${userId}`)
+//     })
+//     .post((req,res)=>{
+//         res.send(`User Details for ID : ${userId} Created`)
+//     })
+//     .put((req,res)=>{
+//         res.send(`User Details for ID : ${userId} Updated`)
+//     })
+//     .delete((req,res)=>{
+//         res.send(`User Details for ID : ${userId} Deleted`)
+//     })
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
