@@ -29,7 +29,7 @@ HOW to create an Express project ?
 Route of create and express project
 step 1 -Initialize project 
 Open terminal and run the command to initialize npm 
--> npm init
+-> npm init -y
 
 step 2 -Install express
 Install express via npm
@@ -45,34 +45,43 @@ const app=express()
 
 step-5 -Define a port and start/listen the server
 const PORT=8000
-app.listen()
+app.listen(PORT,()=>{
+     console.log("Server running")
+})
 
-Understanding request and response in Express
-request : It represent the http request and contains data saved by the client including path parameter quesry string body data headers 
-response : It is represents hhtp response that an express app sends back to the client ,it provid methods data  
+Understanding request and response in Express :-
+request : It represents the http request and contains data sent by the client including path parameters, query strings body data, headers and more. 
+response : It is represents http response that an express app sends back to the client ,it provides methods to send data like 
      res.send(),res.json(),res.status()......etc 
 
-app.get("/",(req,res)=>{
 
+app.get("/",(req,res)=>{
+    res.send("This is an example of response")
+    console.log(req.method)
 })     
 
-
-
-
-routes in express: routing defines how an application   respond to client requset 
---express uses method like get(),post(),put(),delete()   etc to define routes according to http
---routes consist of a path and a call back func with req and res parameter
---there are 2 typeof route :  normal route and parameter route 
-     for ex:  
+Routes in express:-
+--Routing defines how an applications end point respond to client requset 
+--Express uses method like get(),post(),put(),delete() etc to define routes according to http methods.
+--Routes consist of a path and a callback func with req and res parameters.
+--There are 2 types of routes :  normal route and parameterized route 
+ for ex:-  
 app.get("/books",(req,res)=>{
-     res.send("normal")
+     res.send("normal route")
 }) 
+app.get("/books/:id",(req,res)=>{
+    res.send("parameterized route")   
+})
 
---route parameter are dynamic segment inurl path difine by using a single column,it allows capturing value directly from url which are than accecible using req.params in express
-      for 
+Route Parameter:
+--Route parameters are dynamic segments in the url path defined by using a single column(/books/:id),it allows capturing value directly from the url which are than accecible by using req.params in express
+  for Ex:
+  app.get("/books/:id",(req,res)=>{
+    res.send(`parameterized route ${req.params.id}`)   
+  }) 
 
---in express multiple parameter are allow
---route parameter are use
+--In express multiple parameters are allowed.
+--Route parameters are used to select a specific resource like fetching a specific user by id.
 
 
 QUERY STRING
