@@ -119,4 +119,6 @@ Use of JSON Web Development:-
 --In express res.json(data) sends a JSON response while middleware like express.json()  and else incoming json request
 --Some common use cases are sending user data,configuration or the result of database query to the client.
 
+Q.1 What is the role of a middleware?
+ It is handle req and res  between the user and server.
 
