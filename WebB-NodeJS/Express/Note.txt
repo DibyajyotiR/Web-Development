@@ -85,18 +85,18 @@ Route Parameter:
 
 
 QUERY STRING
--- appended 
-e.g: ?price=10000&color=red
-in express querry string are  acceced via req.query 
-e.g: app.get('/search',(req,res)=>{
+--Query strings are key value pairs appended to the end of a url after a queustion mark (?)
+  e.g: ?price=10000&color=red
+--In express query string are accessed in express via req.query object
+  e.g: app.get('/search',(req,res)=>{
      res.send(`Search for: ${req.query.q}`)
 })
 
---query string are used to filtering data ,searching providing parameter
+--Query string are used to filtering data ,searching or providing additional parameters to a request.
 
 Route Chaining: 
---Route Chaining allows multiple http methods for a single route using
---It keeps route dclaration especally operation on one path 
+--Route Chaining allows defining multiple http methods for a single route using app.rout()
+--It keeps route dclarations organised especially when handling different operation on one path. 
 e.g app.route('/books')
     .get((req,res)=>{...})
     .post((req,res)=>{...})
@@ -105,17 +105,18 @@ e.g app.route('/books')
 
 JSON
 --JSON stands for JavaScript object Notation.
---It is light weight for representig structured Data
---It uses key value pair and it easy for both humans and machines to read or generate 
--It is used for data exchange between client and server in webapplications.
+--It is a light weight text based data format for representig structured Data.
+--It uses key value pairs and it easy for both humans and machines to read or generate. 
+--It is used for data exchange between client and server in webapplications.
 e.g {
       "name": "manas";
       "age": 25 ;
     }
 --In JSON format keys are also written in doublecot("").
 
-Use of JSON Web Development
---APIs typically send a in JSON format beacuse it is a language indipendent and supported by most prohgramming languages 
---In express res.JSON()   sends a JSON response while middleware like express.JSON()  and else incoming  request
+Use of JSON Web Development:-
+--APIs typically send and recieve data in JSON format beacuse it is a language independent and supported by most programming languages. 
+--In express res.json(data) sends a JSON response while middleware like express.json()  and else incoming json request
 --Some common use cases are sending user data,configuration or the result of database query to the client.
+
 
