@@ -22,9 +22,8 @@ Differences between Express and nodejs
 
 HOW to create an Express project ?
 --To create an Express project 1stly we need nodejs Installed with npm 
---And then Install the E2edxpress package using npm
---After that we have setup our application step by step                              
-                              
+--And then Install the Express package using npm
+--After that we have setup our application step by step
 
 Route of create and express project
 step 1 -Initialize project 
@@ -101,7 +100,71 @@ e.g app.route('/books')
     .get((req,res)=>{...})
     .post((req,res)=>{...})
     .put((req,res)=>{...})
+
+  
     .delete((req,res)=>{...})
+
+
+--req.params.id
+---In Node.js / Express, req.params.id is used to get the value of a route parameter from the URL.
+req → Request object
+params → Contains route parameters
+id → The specific parameter name
+
+---req.params
+--Used for:Getting values from URL route parameters
+Example:
+app.get('/user/:id', (req, res) => {
+    res.send(req.params.id);
+});
+--> URL:/user/101
+--> Output:101
+✔ Used when value is part of the URL path
+✔ Mostly used for IDs
+
+
+---req.query
+--Used for:Getting values from query string (after ? in URL)
+Example:
+app.get('/search', (req, res) => {
+    res.send(req.query.name);
+});
+-->URL:/search?name=Dibyajyoti
+-->Output:Dibyajyoti
+✔ Used for filtering, searching, sorting
+✔ Data is visible in URL
+Example:
+/products?category=shoes&price=1000
+
+
+---req.body
+--Used for:Getting data sent from form / frontend / POST request
+Example:
+app.post('/login', (req, res) => {
+    console.log(req.body);
+});
+--Data sent from frontend:
+{
+  "email": "test@gmail.com",
+  "password": "1234"
+}
+✔ Used in POST, PUT requests
+✔ Data is NOT visible in URL
+✔ Need middleware: express.json()
+
+---Quick Difference Table
+Feature            	req.params	        req.query	           req.body
+Where from?	         URL path	             URL ?	         Request body
+Visible in URL?	       Yes	               Yes	                 No
+Mostly used for	       ID	             Filter/Search	        Form data
+
+Interview One-Line Answer:
+--------------------------------
+req.params → Used to get route parameters from URL.
+req.query → Used to get query string values.
+req.body → Used to get data sent in POST/PUT request body.
+
+
 
 JSON
 --JSON stands for JavaScript object Notation.
@@ -122,3 +185,49 @@ Use of JSON Web Development:-
 Q.1 What is the role of a middleware?
  It is handle req and res  between the user and server.
 
+Middleware:-
+--Middleware is a function or software layer that sits between the req and res cycle in webapplications in frameworks like express, which enable developer to add modify and handle functionality for incoming req before they reach the final route handler. 
+--It acts as in intermediate between frontend and backend for communication , requesting , handling ,logging , security etc.
+--In simple we can say it is a function taht recieves req res and the next callback as an argument which allows executing code and make changes to req res object.
+
+Use of Middleware:-
+--Middleware is widely used for task such a authentication login errorhandling passingreq-body and adding custom headers.
+--Some common buitlt-in and third-party middleware are express.json() , custom logger function , External.
+--Middleware can be apply globaly  by using  app.use() or use specific route by using app.get() / app.post()
+
+What is next():-
+--The next function in middleware passes control to the other-middleware function in the stask.
+--If a middleware does not end the req res cycle it must call next method other the req will hang and not be processed further.
+
+Types of Middleware?
+1.Built-In Middleware
+2.Thirt-Party Middleware
+3.Custom Middleware
+4.Application-Level Middleware
+5.Router-Level Middleware
+
+Express Router :-
+--Express Router is a feature in expressJS tht allows us to create modular and mountable route handler acting like a many express application for specific part of API.
+--It helps us to organise routes into separate file like /users, /products, /login , / categories.  So large apps stay clean reuasable and easy to maintain.
+--express.router()  create a separate router object or variable that can have its own routes and middleware similar to the main app.
+
+Static File :-
+--Express provide a built in middleware express.static()  to serve static file from a folder such as public or assests.
+--Static file in express are files like image, css ,client side JavaScript , pdf etc that are sent tp the browser without any server site processing.
+--By using static() any file inside public folder becomes directly accessible from its path.
+--We can mount multiple static folder  or add a url prefix like app.use("/assests",express.static("public")) to serve file under a specific route segment.
+--use()  by using this method we can use middleware
+
+What is EJS?
+--EJS stands for Embedded JavaScript which is a template engine that lets us write html pages with JavaScript to generate dynamic content'
+--EJS template uses <%= variable%> to display value into html and <% %> to write JavaScriptlogic  such as loops,condition inside the EJS File.
+--To enable EJS we need to install EJS Module and write the below syntax 
+     app.set("view engine","ejs")
+     app.set("views",path.join(__dirname,"views"))
+    Once configure by using the avobe syntax express will automatically look for the template inside the view folder,and ejs will render them when res.render() is called.
+Server Site Rendering with EJS :-
+--A route handler cause res.render('templateName',{data})  and EJS combines the template with the data to produce complete html page on the server.    
+--EJS handles dynamic html views while express.static()  serves supporting assest like css and JavaScript used by the views.
+--The common structure is views folder for EJS template and public folder for static file.
+
+.env use to use environmental file.

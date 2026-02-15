@@ -1,0 +1,107 @@
+DataBase:-
+--MongoDB is a noSQL Document database that store data as JSON documnets inside collections.
+--Documents are like JSON object with key value pairs and can contain nested documents and arrays providing a schema base structure.
+--the code feature include flexible schema indexing for first query ,horizontal scaling,file availability and aggrigation for data processing.
+--We can perform basic operation like crud operation ,that is  insert documents,find documents ,update documents, and delete documents.
+
+--database - multiple data store
+--collection - collection of documents
+--documents  -single data
+
+
+
+Mongoose:-
+--Mongoose is an object data modeling (ODM) library for NodeJS used to structure and validate data when working with mongodb.
+--It is a data supervisor. 
+--It creates schema means structure for our data.
+--It is used to define the rules to create the data model. 
+--Also it provides method to interact with data 
+  ex:- find(),updateOne(),create(),findOne(),etc...
+
+
+MongoDB :-
+--It is noSQL Document database server 
+--It stores and manage data by using queries and indexing.
+--It can run alone as a database 
+
+Mongoose :- 
+--It aN ODM for libray for NodeJS
+--It used to create data model validate and organise data while using mondodb.
+--It can not work without mongodb,it only helps interactwith mondodb.
+
+??Why Mic using mongodb without  mongoose is riskey in large apps ?
+--Using mongodb directly in large app is not wrong but it is riskey if we do not built strong pattern ,validation, structure and consistency that an ODM like mogoose will provide.
+--Mongodb is schema flexible so different documents in the same collection can silently and off with missing fields, wrong types or inconsistace structure. 
+
+
+---schema-structure + rules(datatype)  -structure of a document
+
+---model-is a tool who gives us different type of method to modify data(create)
+
+-----------------------------------------------------------------
+crud operation(Create, Read, Update, Delete) express me data create krne k liye asyncronous process hota h.
+async await or ,.then.catch (promise)   we can use
+
+
+
+
+
+
+
+
+
+
+
+
+--we can create and get the connection string in ways 1.from mongodb atlast(cloud)
+--create a project cluster in a class then add a database use and ip access then click connect your application and select the driver method .now we have to save user name and passward and
+ db name and once it done  and then copy the connection 
+ --install   by default listn local host 27017
+ --according to the port no  the typical connection looks like mongodb://localhost:27017/dataBaseName
+
+Cluster :-
+--A mondodb cluster is a mongodb server that provides features like r     
+--In atlast cluster manage database deployment  that web created 
+
+--create a project folder and init      -npm init -y
+--install required packages - npm i express mongodb dotenv
+--create a basic server and start the server
+--store mongodb uri (connection string)dotenv
+
+
+require('dotenv').config()
+const URI =process.env.MongoDB
+
+MONGODB BY USING MANGOOS
+mongoose.connect(URI)
+        .then((res)=>{
+          console.log("DB Connected");
+        }).catch((err)=>{
+          console.log(err.message)
+        })
+const userSchema = new mongoose.Schema({
+       object
+})  
+
+
+Database Association :- 
+
+mainly using embedding or referencing link in sql foreign key.
+--Relatinships like one to one ,one to many , many to many are modeled at the document lebel.
+--We need to connect realted data either by putting it inside the same document or by storing id of another document.
+
+Embedding :-
+--Embedded document it means story related data inside the same document as a nested object or array 
+--It is best when data when tghtly coupled,small and usally read together.
+  for ex : user with a single profile or user with a small list of details
+
+pros :- it is faster file reading data and simple queries  beacuse all the data stored in one document .
+documents can grow large  and may hit 
+
+Referencing :- It means keeping related data in separate collections and storing only the referencing id in parent document.
+--It is useful when data is large,changes frequently,access independently or shared between many parents.
+for ex:- users and orders  ,students and courses
+  pros :- it is better for large
+
+
+

@@ -1,0 +1,190 @@
+INTERVIEW BASED :
+-React is a frontend library,which is used in order to build the user interfaces and components.
+-Express is a backend web application framework for NodeJS, it simplifies serverside devlopment.
+-High scalibility:
+
+
+stateless nature of http request
+It stores user data to avoid repeated input by the user.
+chatgpt ans
+The stateless nature of an HTTP request means that HTTP does not remember user information between requests.
+
+
+COMMON HTTP STATUS CODE
+200 -> ok -> Request successful
+201 -> created -> Data created
+400 -> Bad Request -> Invalid Request 
+401 -> Unauthorized -> No Authentication
+403 -> Forbidden -> Access defined
+404 -> Not found -> Page Not found
+500 -> Internal server error -> server crashed
+
+
+
+---Quick Difference Table
+| Feature         | req.params | req.query     | req.body     |
+| --------------- | ---------- | ------------- | ------------ |
+| Where from?     | URL path   | URL ?         | Request body |
+| Visible in URL? | Yes        | Yes           | No           |
+| Mostly used for | ID         | Filter/Search | Form data    |
+
+
+Interview One-Line Answer:
+--------------------------------
+req.params → Used to get route parameters from URL.
+req.query → Used to get query string values.
+req.body → Used to get data sent in POST/PUT request body.
+
+
+
+What is REST API?
+--REST = Representational State Transfer
+--A REST API is an API that follows REST principles and uses HTTP methods to perform CRUD operations.
+--It treats data as resources and uses URLs to access them.
+
+REST Rules:
+--Uses HTTP methods (GET, POST, PUT, DELETE)
+--Stateless
+--Uses URLs to represent resources
+--Usually returns JSON
+
+This structure follows REST standards.
+GET    /users        → Get all users
+GET    /users/1      → Get single user
+POST   /users        → Create user
+PUT    /users/1      → Update user
+DELETE /users/1      → Delete user
+
+Difference Between API and REST API:
+--API is a general concept,REST API is a type of API.
+| Feature     | API                     | REST API                    |
+| ----------- | ----------------------- | --------------------------- |
+| Meaning     | Communication interface | API that follows REST rules |
+| Protocol    | Any protocol            | Only HTTP                   |
+| Data Format | JSON, XML, etc.         | Mostly JSON                 |
+| Structure   | No fixed rules          | Follows REST principles     |
+
+--All REST APIs are APIs,But not all APIs are REST APIs.
+Example:    SOAP API → Not REST
+            GraphQL API → Not REST
+            REST API → Follows REST
+
+How API Works Internally?
+--Step 1: Client Sends Request:  
+        Frontend sends request         -->GET /api/users/1
+--Step 2: Request Reaches Server: 
+        Server receives request        -->app.get('/api/users/:id', (req, res) =>{// logic here})
+--Step 3: Business Logic Runs:
+        Validates data---Checks authentication---Connects to database---Fetches required data
+--Step 4: Database Response:
+        Database sends data back to server                 
+--Step 5: Server Sends Response:
+        Server sends JSON response      -->{"id": 1,"name": "Dibyajyoti"}  
+--Step 6: Frontend Uses Data:
+        Frontend receives JSON and displays it on UI.
+
+
+
+Frontend → API Request → Server → Database → Server → JSON Response → Frontend
+
+What is JSON?
+--JSON = JavaScript Object Notation
+--JSON is a format used to store and exchange data between systems.
+--It is mainly used in APIs to send data between frontend and backend.
+--JSON (JavaScript Object Notation) is a lightweight data format used to store and exchange data between client and server, especially in REST APIs.
+
+JSON works with:JavaScript,Python,Java,PHP,C#,Node.js
+
+JSON Structure Rules:
+--Data is in key-value pairs
+--Keys must be in double quotes
+--Strings must be in double quotes
+--Data is separated by commas
+
+JSON Data Types:    String → "Hello"
+                    Number → 25
+                    Boolean → true / false
+                    Array → []
+                    Object → {}
+                    Null → null
+
+Why JSON is Used?
+--JSON is used because it is the standard format for data exchange between client and server.
+--JSON data is small in size compared to XML.
+        JSON:   { "name": "Ram" }
+        XML:    <name>Ram</name>
+
+Why we use stringify?
+--Sending data to server
+--Storing data in localStorage
+--Converting object into string format
+
+JSON.stringify()  
+        Purpose:        --Convert JavaScript Object → JSON String
+Example:JS
+        const user = {
+                         name: "Dibyajyoti",
+                         age: 22
+                     };
+
+        const jsonData = JSON.stringify(user);
+        console.log(jsonData);
+Output:JSON
+        {"name":"Dibyajyoti","age":22}
+
+JSON.parse()
+        Purpose:        --Convert JSON String → JavaScript Object
+Example:JS
+        const jsonData = '{"name":"Dibyajyoti","age":22}';
+        const user = JSON.parse(jsonData);
+        console.log(user.name);
+Output:web server
+        Dibyajyoti
+
+
+Object → JSON.stringify() → Send to server
+Server → Sends JSON
+Client → JSON.parse() → Convert to object → Use in UI
+
+| Method           | Converts             | Use Case               |
+| ---------------- | -------------------- | ---------------------- |
+| JSON.stringify() | Object → JSON string | Sending / storing data |
+| JSON.parse()     | JSON string → Object | Reading received data  |
+
+Without express.json() → req.body will be undefined
+app.post('/user', (req, res) => {
+  console.log(req.body); // undefined
+});
+
+app.use(express.json()) is a built-in middleware in Express.
+app.use(express.json()) is a middleware in Express that allows the server to read JSON data from the request body.
+✔ Parses incoming JSON
+✔ Converts JSON → JavaScript object
+✔ Stores it inside req.body
+req.body contains the data sent by the client in the request body.
+app.use(express.json());
+app.post('/user', (req, res) => {
+  console.log(req.body); 
+});
+
+When It Is Required?
+--POST request
+--PUT request
+--PATCH request
+
+--res.json() is used to send a JSON response from the server to the client.
+
+res.send("Hello")       // Sends text
+res.json({name:"Ram"})  // Sends JSON
+
+--res.status() is used to set the HTTP status code of the response.
+--It tells the client whether the request was successful or failed.
+app.get('/user', (req, res) => {
+  res.status(200).json({ message: "Success" });
+});
+
+
+
+What is exports in Node.js?
+--In Node.js, every file is treated as a module.
+--exports is used to send functions or variables from one file to another.

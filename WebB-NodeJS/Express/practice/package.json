@@ -1,5 +1,5 @@
 {
-  "name": "ejs-server",
+  "name": "practice",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -10,8 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "express-ejs-layouts": "^2.5.1"
+    "express": "^5.2.1"
   }
 }

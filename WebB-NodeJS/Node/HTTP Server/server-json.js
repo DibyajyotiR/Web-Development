@@ -6,6 +6,8 @@ const server = http.createServer((req,res)=>{
     if(req.url==='/'&& req.method==='GET'){
         res.statusCode=200
         res.end(JSON.stringify({message: "Wecome to the API..."}))
+
+        //?  res.end(JSON.stringify({message: "Wecome to the API..."}))  → This line converts the JavaScript object {message: "Wecome to the API..."} into a JSON string format before sending it as a response to the client. The JSON.stringify() method is used to serialize the JavaScript object into a JSON string, which can be easily transmitted over the network and understood by clients that consume the API.
     }else if(req.url==='/users'&&req.method==='GET'){
         res.statusCode=200
         const users=[{id:1,name:"Smith",id:2,name:"Ward"}]

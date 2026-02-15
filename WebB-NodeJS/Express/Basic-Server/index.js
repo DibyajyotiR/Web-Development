@@ -3,6 +3,7 @@ const express = require('express');
 
 //initialize express
 const app=express()
+//bydefault method is get
 
 //define route
 //we have to pass two arguments,1st is path,2nd is handler (maybe it is arrow func,callback func,anonymous func,normal func)      

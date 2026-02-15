@@ -20,15 +20,15 @@ What are Shell Commands?
 
 Types of shell
 --There are 4 types of Shell
-1)BASH - Bone Again Shell 
-2)ZSH - Z Shell
-3)Power Shell
+1)BASH - Bone Again Shell  
+2)ZSH - Z Shell (mac) 
+3)Power Shell (windows)
 4)FISH - Friendly Interactive Shell
 
 Node JS :
 --Its a JavaScript runtime environment that allows us to run JavaScript code  outside of a web browser,
 --It is an open source cross platform JavaScript runtime environment that runs on chromes V8 Engine
---Node JS is known for its non-blocking I/O ,Event driven architecture making it great for building sckelble high performance
+--Node JS is known for its non-blocking I/O ,Event driven architecture making it great for building scalable high performance
 
 Node JS Architecture :
 1-Event Driven
@@ -42,10 +42,10 @@ Node REPL(Read-Evaluate-Print-Loop)
 --It is useful for quick testing, debugging and learning where JavaScript code can be experimented with directly.
 
 How it Works ?
---Read :It takes the user input
+--Read     :It takes the user input
 --Evaluate :It evaluate the code immediately in the same line
---Print :It Shows the output or result
---LOOP :It waits for the next input until the user exits
+--Print    :It Shows the output or result
+--LOOP     :It waits for the next input until the user exits
 --To start NodeREPL  open terminal or cmd type (node) and press enter
 --To Exit we can use (.exit)
 --And to clear Environment (.clear)
@@ -77,6 +77,8 @@ ES6/ECMA Script Modules :
 --we have to use type module in package.js
 
 on to enable ES6.
+
+module is a package.
 
 Node Js path module :
 --The node js path module is a built in module used to work with files and directory across different operating system ,allowing seamless cross platform development and file manipulation task.
@@ -111,7 +113,7 @@ Synchronous Method :
 
 Asynchronous Method :
 --Asynchronous method do not block execution instead they use callbacks ,promises or async-await allowing other Operations to run curently and improving for heavy I/O workload.
---These are preffered for sckelble eye-performance  application or server
+--These are preffered for sckelble eye-performance application or server
 --Some common sysnchronous method :-
      ---fs.unlink()
      ---fs.readFile()
@@ -127,6 +129,7 @@ HTTP Server(Hyper Text Transfer Protocol):
 --An HTTP server is programm taht listens for request from clients and sends back response(like web page or data).
 --In NodeJS we can easily create an HTTP server using the builtin HTTP module. 
 --client and browser sends a request like URL,then server listens on a specific port no and then the server processes the request and sends back a responds like html, text or json
+--HTTP (HyperText Transfer Protocol) has methods such as GET, POST, PUT, and DELETE, which are used to perform different types of operations on data.
 
 http module ---> http server --->request --->response
          
@@ -189,50 +192,14 @@ COMMON HTTP STATUS CODE
 500 -> Internal server error -> server crashed
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+CRUD operations (Create, Read, Update, Delete) are the four fundamental functions for managing data in databases, APIs, and applications, allowing users to add new records (Create), fetch existing ones (Read), modify them (Update), and remove them (Delete). They form the backbone of most software, enabling interaction with data through forms, reports, SQL queries, or HTTP requests (POST for Create, GET for Read, PUT/PATCH for Update, DELETE for Delete).
+The four operations:
+Create: Adding new data or records (e.g., signing up a new user, adding a product).
+Read: Retrieving or viewing existing data (e.g., viewing your profile, searching for products).
+Update: Modifying existing data (e.g., changing your password, editing product details).
+Delete: Removing data from the system (e.g., deleting an account, removing a product).
+Where they're used:
+Databases: Mapped to SQL commands like INSERT, SELECT, UPDATE, DELETE.
+REST APIs: Mapped to HTTP methods like POST, GET, PUT/PATCH, DELETE.
+User Interfaces: Implemented through forms and reports that allow users to interact with data.
 
