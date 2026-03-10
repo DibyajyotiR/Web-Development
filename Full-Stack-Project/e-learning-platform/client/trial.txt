@@ -1,0 +1,5 @@
+<div className='bg-[#252641] text-white flex flex-col justify-center items-center text-center px-20 py-4 rounded-lg'>
+        <h2 className='text-xl md:text-2xl xl:text-3xl font-semibold'>Online coaching lessons for remote learning.</h2>
+        <p className='mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestiae expedita nemo deleniti atque quam voluptates doloribus sequi, omnis sit culpa repellendus iste.</p>
+        <button className='bg-[#49BBBD] rounded-md px-4 py-1.5 mt-5 transform transition-all duration-200 ease-in-out active:scale-95 active:shadow-inner'>Start learning now</button>
+      </div>
