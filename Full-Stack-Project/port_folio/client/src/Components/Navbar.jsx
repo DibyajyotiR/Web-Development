@@ -8,12 +8,12 @@ const Navbar = () => {
         <div className='flex justify-between items-center relative'> 
           <div className='relative'>
             <div className='absolute -inset-2 bg-blue-500 blur-2xl opacity-40'></div>
-            <h2 className='font-bold text-2xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 bg-clip-text text-transparent'>DIBYAJYOTI ROUT</h2>
+            <h2 className='font-bold  text-sm sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 bg-clip-text text-transparent'>DIBYAJYOTI ROUT</h2>
           </div>
             {/* Blur Background */}
             {/* Menu */}
             <div className='hidden md:flex '>
-            <ul className='flex items-center gap-20 '>
+            <ul className='flex items-center px-6 md:px-10 md:gap-6 lg:gap-20  text-sm md:text-lg font-bold'>
                 <li className="relative px-3 py-1 group">
                    {/* Blur Glow */}
                   <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 blur-xl opacity-0 group-hover:opacity-40 transition duration-500 rounded-lg"></div>

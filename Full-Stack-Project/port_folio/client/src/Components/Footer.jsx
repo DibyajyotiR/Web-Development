@@ -3,6 +3,7 @@ import React from 'react'
 import { FaGithub,FaLinkedin,FaInstagramSquare ,FaFacebook , FaWhatsappSquare,FaTelegram,FaReact} from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { IoCall } from "react-icons/io5";
 
 const Footer = () => {
     const date=new Date().getFullYear()
@@ -13,32 +14,46 @@ const Footer = () => {
                 <div>
                 <p className='font-semibold uppercase  border-b-1 border-gray-400'>professional</p>
                 <div className='flex gap-6 p-4'>
+                  <a href="https://github.com/DibyajyotiR" target='_blank'>
                   <FaGithub size={55} 
-                            className="border border-gray-600 p-3 rounded-xl hover:border-green-400 hover:text-green-400 transition duration-300 cursor-pointer"/>
+                            className="border border-gray-600 p-3 rounded-xl hover:border-green-400 hover:text-green-400 transition duration-300 cursor-pointer"/></a>
+                  <a href="https://www.linkedin.com/in/dibyajyoti--rout/" target='_blank'>
                   <FaLinkedin size={55} 
-                            className="border border-gray-600 p-3 rounded-xl hover:border-blue-500 hover:text-blue-400 transition duration-300 cursor-pointer"/>
+                            className="border border-gray-600 p-3 rounded-xl hover:border-blue-500 hover:text-blue-400 transition duration-300 cursor-pointer"/></a>
+                  
                 </div>
                 </div>
                 <div>
                 <p className='font-semibold uppercase border-b-1 border-gray-400'>social</p>
                 <div className='flex gap-6 p-4'>
-                  <FaInstagramSquare size={55} 
+                  <a href="https://www.instagram.com/d_i_b_y_a_a__?igsh=dzJmend6dmlyOThu" target='_blank'>
+                    <FaInstagramSquare size={55} 
                             className="border border-gray-600 p-3 rounded-xl hover:border-pink-700 hover:text-pink-700 transition duration-300 cursor-pointer"/>
-                  <FaFacebook size={55} 
+                  </a>
+                  <a href="https://www.facebook.com/share/17bvrXNnBE/" target='_blank'>
+                    <FaFacebook size={55} 
                             className="border border-gray-600 p-3 rounded-xl hover:border-blue-700 hover:text-blue-700 transition duration-300 cursor-pointer"/>
+                  </a>
+                  
                 </div>
                 </div>
                 <div>
                 <p className='font-semibold uppercase border-b-1 border-gray-400'>contact</p>
                 <div className='flex gap-6 p-4'>
-                  <FaWhatsappSquare size={55} 
-                            className="border border-gray-600 p-3 rounded-xl hover:border-green-600 hover:text-green-600 transition duration-300 cursor-pointer"/>
-                  <FaTelegram size={55} 
+                  <a href="https://wa.me/919348244578" target='_blank'>
+                    <FaWhatsappSquare size={55} 
+                            className="border border-gray-600 p-3 rounded-xl hover:border-green-600 hover:text-green-600 transition duration-300 cursor-pointer"/></a>
+                  <a href="tel:+919348244578" target='_blank'>
+                    <IoCall size={55} 
                             className="border border-gray-600 p-3 rounded-xl hover:border-sky-500 hover:text-sky-500 transition duration-300 cursor-pointer"/>
-                  <IoIosMail size={55} 
+                  </a>
+                  
+                  <a href="mailto:routdibyajyoti278@gmail.com" target='_blank'>
+                    <IoIosMail size={55} 
                             className="border border-gray-600 p-3 rounded-xl hover:border-red-600 hover:text-red-600 transition duration-300 cursor-pointer"/>
+                  </a>            
                 </div>
-                </div>
+               </div>
               </div>
               <div className="flex items-center justify-center gap-2 text-center">  
                    <span 
