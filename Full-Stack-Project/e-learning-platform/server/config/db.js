@@ -10,3 +10,5 @@ exports.connectDB=async()=>{
         console.error(err.message);
     }
 }
+
+module.exports=connectDB

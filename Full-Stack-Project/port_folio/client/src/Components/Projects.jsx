@@ -17,24 +17,54 @@ const Projects = () => {
   };
 
   const slides = [
-    { title: "Project 1", description: "MERN App", bg: "bg-blue-500" },
+    { title: "Blog App", description: "MERN Blog Application with CRUD",  live: "https://blog-app-sand-sigma.vercel.app/" ,bg:"bg-pink-500"},
     { title: "Project 2", description: "React App", bg: "bg-green-500" },
     { title: "Project 3", description: "Portfolio", bg: "bg-purple-500" },
   ];
 
   return (
-    <div className="max-w-5xl mx-auto mt-10"id='projects'>
-      <Slider {...settings}>
-        {slides.map((slide, index) => (
-          <div key={index} className={`h-64 md:h-80 flex items-center justify-center ${slide.bg} rounded-2xl text-white text-center`}>
-            <div>
-              <h2 className="text-2xl md:text-4xl font-bold">{slide.title}</h2>
-              <p className="text-sm md:text-lg mt-2">{slide.description}</p>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+       <div className="max-w-5xl mx-auto mt-10 px-3 sm:px-6" id="projects">
+  <Slider {...settings}>
+    {slides.map((slide, index) => (
+
+      <div key={index} className="px-2">
+
+        <div className={`
+          h-48 sm:h-60 md:h-80 
+          flex flex-col justify-center items-center 
+          ${slide.bg} 
+          rounded-xl sm:rounded-2xl 
+          text-white text-center 
+          p-4 sm:p-6
+          shadow-md
+        `}>
+
+          <h2 className="text-lg sm:text-2xl md:text-4xl font-bold">
+            {slide.title}
+          </h2>
+
+          <p className="text-xs sm:text-sm md:text-lg mt-2 px-2">
+            {slide.description}
+          </p>
+
+          <a
+            href={slide.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 px-3 py-1.5 text-xs sm:text-sm 
+            bg-white/20 border border-white/30 rounded-md 
+            hover:bg-white/30 transition"
+          >
+            🌐 View
+          </a>
+
+        </div>
+
+      </div>
+
+    ))}
+  </Slider>
+</div>
   );
 };
 
