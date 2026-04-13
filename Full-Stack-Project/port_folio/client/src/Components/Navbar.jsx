@@ -4,7 +4,7 @@ import { FiDownload ,FiX ,FiMenu } from "react-icons/fi";
 const Navbar = () => {
     const [openMenu,setOpenMenu]=useState(false)
   return (
-    <div className=' fixed top-0 left-0 w-full z-50 bg-black text-base md:text-lg xl:text-lg  text-white px-8 md:px-10 xl:px-20 py-6 md:py-6 xl:py-7'>
+    <div className=' fixed top-0 left-0 w-full z-50 bg-black text-base md:text-lg xl:text-lg  text-white px-4 md:px-8 lg:px-12 py-4'>
         <div className='flex justify-between items-center relative'> 
           <div className='relative'>
             <div className='absolute -inset-2 bg-blue-500 blur-2xl opacity-40'></div>
@@ -13,7 +13,7 @@ const Navbar = () => {
             {/* Blur Background */}
             {/* Menu */}
             <div className='hidden md:flex '>
-            <ul className='flex items-center px-6 md:px-10 md:gap-6 lg:gap-20  text-sm md:text-lg font-bold'>
+            <ul className='flex items-center px-6 md:px-10 md:gap-6 lg:gap-10 text-sm md:text-lg font-bold'>
                 <li className="relative px-3 py-1 group">
                    {/* Blur Glow */}
                   <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 blur-xl opacity-0 group-hover:opacity-40 transition duration-500 rounded-lg"></div>

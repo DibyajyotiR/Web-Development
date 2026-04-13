@@ -23,14 +23,15 @@ const Projects = () => {
   ];
 
   return (
-       <div className="max-w-5xl mx-auto mt-10 px-3 sm:px-6" id="projects">
+       <div data-aos="zoom-in" data-aos-duration="1500"
+            className="max-w-5xl mx-auto mt-20 px-3 sm:px-6 scroll-mt-32 " id="projects">
   <Slider {...settings}>
     {slides.map((slide, index) => (
 
       <div key={index} className="px-2">
 
         <div className={`
-          h-48 sm:h-60 md:h-80 
+          h-60 sm:h-80 md:h-100 
           flex flex-col justify-center items-center 
           ${slide.bg} 
           rounded-xl sm:rounded-2xl 

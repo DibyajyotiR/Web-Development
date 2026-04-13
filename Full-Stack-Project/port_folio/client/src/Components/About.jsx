@@ -18,8 +18,9 @@ const About = () => {
     // Duplicate slides for seamless loop
   const loopedSlides = [...slides, ...slides];
   return (
-  <div id='about' className='bg-black font-bold text-white px-10 md:px-10 xl:px-16 py-20 md:py-20 xl:py-16 text-center min-h-[100vh] flex flex-col items-center justify-center overflow-hidden w-full'>
-    <div className='bg-cyan-300/20 border border-cyan-400 rounded-2xl  px-10 md:px-24 lg:px-40  py-10 text-center max-w-5xl mx-auto '>
+  <div id='about' data-aos="zoom-out-down" data-aos-duration="1500"
+       className='bg-black font-bold text-white px-10 md:px-10 xl:px-16 py-20 md:py-20 xl:py-16 text-center min-h-[100vh] flex flex-col items-center justify-center overflow-hidden w-full'>
+    <div data-aos="zoom-in-up" className='bg-cyan-300/20 border border-cyan-400 rounded-2xl  px-10 md:px-24 lg:px-40  py-10 text-center max-w-5xl mx-auto '>
       <div>
        <h2 className='text-5xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-blue-500 via-blue-600 to-green-600 bg-clip-text text-transparent animate-pulse drop-shadow-2xl mb-4 md:mb-8 md:mt-4 '>ABOUT ME</h2>
        <h2 className='text-sm md:text-lg lg:text-2xl bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent '>Hi, I’m Dibyajyoti Rout, an aspiring MERN stack developer.</h2>

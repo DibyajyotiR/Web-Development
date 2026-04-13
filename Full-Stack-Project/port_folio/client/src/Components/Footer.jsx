@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
                 </div>
                 <div>
-                <p className='font-semibold uppercase border-b-1 border-gray-400'>contact</p>
+                <p  className='font-semibold uppercase border-b-1 border-gray-400 hover:data-aos="fade-right"'>contact</p>
                 <div className='flex gap-6 p-4'>
                   <a href="https://wa.me/919348244578" target='_blank'>
                     <FaWhatsappSquare size={55} 
